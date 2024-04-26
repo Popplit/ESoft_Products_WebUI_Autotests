@@ -8,5 +8,7 @@ public interface Constants {
             VIDEOCONTROL_KUZBASS_URL = "https://v42demo.goodline.info",
             IDENTICAL_KEMEROVO_URL = "https://idkem.ru/";
     }
-    String PROPERTIES_FILE = "properties.properties";
+    interface Configuration {
+        String PROPERTIES_FILE = "properties.properties";
+    }
 }

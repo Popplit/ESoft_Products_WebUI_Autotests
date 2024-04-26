@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VacancyTest extends ESoftTest {
     @Test
-    void vacancyButtonClickLeadsToCorrectVacancyPage() {
+    void vacancyButtonClickLeadsToCorrectVacancyPageTest() {
         mainPage = mainPage.vacanciesBtnClick();
         String firstVacancyTitle = mainPage.getFirstVacancyTitle();
         vacancyPage = mainPage.firstVacancyBtnClick();

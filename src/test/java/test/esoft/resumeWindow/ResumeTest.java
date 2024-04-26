@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ResumeTest extends ESoftTest {
     @Test
-    void sendResumeWithNotFullPhoneNumber() {
+    void sendResumeWithNotFullPhoneNumberTest() {
         resumePage = mainPage.sendResumeBtnClick();
         mainPage = resumePage.setYourNameTextBox("Тестовый тест")
                 .setPhoneNumberTextBox("999999999")

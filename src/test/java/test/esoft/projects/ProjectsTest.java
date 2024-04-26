@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ProjectsTest extends ESoftTest {
     @Test
-    void kuzbassOnlineProjectButtonLeadsToCorrectPage() {
+    void kuzbassOnlineProjectButtonLeadsToCorrectPageTest() {
         kuzbassOnlineProjectPage = mainPage.projectsBtnClick()
             .kuzbassOnlineProjectBtnClick();
         assertTrue(kuzbassOnlineProjectPage.checkIfProjectHeaderIsDisplayed());
