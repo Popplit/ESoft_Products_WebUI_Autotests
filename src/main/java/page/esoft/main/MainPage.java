@@ -2,7 +2,7 @@ package page.esoft.main;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import helper.UtilityHelper;
+import helper.Utils;
 import page.esoft.vacancy.VacancyPage;
 import page.esoft.projects.KuzbassOnlineProjectPage;
 import page.esoft.resumeWindow.ResumePage;
@@ -28,7 +28,7 @@ public class MainPage {
 
     public VacancyPage firstVacancyBtnClick() {
         vacancyBtns.first().shouldBe(visible).click();
-        UtilityHelper.switchWindowTo(1);
+        Utils.switchWindowTo(1);
         return new VacancyPage();
     }
 

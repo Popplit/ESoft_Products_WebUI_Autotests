@@ -1,6 +1,6 @@
 package test.kaver;
 
-import helper.UtilityHelper;
+import helper.Utils;
 import org.junit.jupiter.api.BeforeEach;
 import page.kaver.event.EventPage;
 import page.kaver.event.ShareEventPage;
@@ -21,7 +21,7 @@ public class KaverTest extends BaseTest {
     @BeforeEach
     void init() {
         initDriver(KAVER_URL);
-        UtilityHelper.waitFor(3);
+        Utils.waitFor(3);
         mainPage = new MainPage();
     }
 }

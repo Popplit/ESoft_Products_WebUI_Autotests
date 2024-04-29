@@ -1,6 +1,6 @@
 package test.kaver.event;
 
-import helper.UtilityHelper;
+import helper.Utils;
 import org.junit.jupiter.api.Test;
 import test.kaver.KaverTest;
 
@@ -14,8 +14,8 @@ public class EventTest extends KaverTest {
         eventPage = eventsCatalogPage.eventCardClick(eventCardIndex);
         shareEventPage = eventPage.shareBtnClick()
             .copyLinkBtnClick();
-        String expectedUrl = UtilityHelper.getCurrentUrl();
-        String actualUrl = UtilityHelper.getTextFromClipboard();
+        String expectedUrl = Utils.getCurrentUrl();
+        String actualUrl = Utils.getTextFromClipboard();
         assertEquals(expectedUrl, actualUrl);
     }
 }

@@ -12,20 +12,33 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <browser>Chrome</browser>
+        <!--JUnit5-->
         <junit.jupiter.version>5.9.1</junit.jupiter.version>
         <junit.platform.version>1.9.1</junit.platform.version>
+        <!--AspectJ-->
         <aspectj.version>1.9.21.1</aspectj.version>
+        <!--Surefire-->
         <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+        <!--Selenide-->
+        <selenide.version>7.3.1</selenide.version>
+        <!--Apache Commons IO-->
+        <commons-io.version>2.16.1</commons-io.version>
     </properties>
 
     <dependencies>
+        <!--Selenide-->
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>7.2.3</version>
+            <version>${selenide.version}</version>
         </dependency>
-
+        <!--Apache Commons IO-->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+        <!--JUnit5-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -54,6 +67,7 @@
 
     <build>
         <plugins>
+            <!--Surefire-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -64,6 +78,7 @@
                     </argLine>
                 </configuration>
                 <dependencies>
+                    <!--AspectJ-->
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
@@ -71,25 +86,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>properties-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>write-project-properties</goal>
-                        </goals>
-                        <configuration>
-                            <outputFile>src/main/resources/properties.properties</outputFile>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
         </plugins>
     </build>
-
 </project>
