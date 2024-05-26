@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class HeaderElements {
     private final SelenideElement changeCityBtn = $x("//button[text()='Санкт‑Петербург']");
-    private final SelenideElement cityKemerovoBtn = $x("//*[@id='headlessui-menu-item-6']");
+    private final SelenideElement cityKemerovoBtn = $x("//a[@id='headlessui-menu-item-7']");
     private final SelenideElement searchBtn = $x("//a[contains(@href, '/search')]");
     private final SelenideElement eventsBtn = $x("//a[text()='События']");
 
