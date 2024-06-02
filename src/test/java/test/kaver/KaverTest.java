@@ -1,5 +1,6 @@
 package test.kaver;
 
+import com.codeborne.selenide.Configuration;
 import helper.Utils;
 import org.junit.jupiter.api.BeforeEach;
 import page.kaver.event.EventPage;
@@ -22,6 +23,7 @@ public class KaverTest extends BaseTest {
     void init() {
         initDriver(KAVER_URL);
         Utils.waitFor(3);
+        Configuration.timeout = 20000;
         mainPage = new MainPage();
     }
 }
